@@ -9,12 +9,12 @@ function App() {
     <Router>
       <div>
         <NavBar />
-        <Switch />
-        <Route path="/" exact component={Home} />
-        <Route path="/players" component={Players} />
-        <Route path="/teams" component={Teams} />
-        <Route render={() => <h1 className="text-center">404 Error</h1>} />
-        <Switch />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/players" component={Players} />
+          <Route path="/teams" component={Teams} />
+          <Route render={() => <h1 className="text-center">404 Error</h1>} />
+        </Switch>
       </div>
     </Router>
   );
