@@ -5,6 +5,8 @@ import { Route, Link } from "react-router-dom";
 import TeamLogo from "./TeamLogo";
 import Team from "./Team";
 
+
+
 const Teams = props => {
   const [state, setState] = useState({ teamNames: [], loading: true });
   useEffect(() => {
