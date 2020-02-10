@@ -4,8 +4,7 @@ import Sidebar from "./SIdebar";
 import { Route, Link } from "react-router-dom";
 import TeamLogo from "./TeamLogo";
 import Team from "./Team";
-
-
+import Loading from "./Loading";
 
 const Teams = props => {
   const [state, setState] = useState({ teamNames: [], loading: true });
@@ -35,7 +34,7 @@ const Teams = props => {
             <Team id={match.params.teamId}>
               {team =>
                 team === null ? (
-                  <h1>Loading</h1>
+                  <Loading />
                 ) : (
                   <div style={{ width: "100%" }}>
                     <TeamLogo id={team.id} className="center" />

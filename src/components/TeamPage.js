@@ -4,6 +4,7 @@ import { getTeamsArticles, getTeamNames } from "../api";
 import Team from "./Team";
 import slug from "slug";
 import TeamLogo from "./TeamLogo";
+import Loading from "./Loading";
 
 const TeamPage = props => {
   const [state, setState] = useState({
@@ -37,7 +38,7 @@ const TeamPage = props => {
       <Team id={teamId}>
         {team =>
           team === null ? (
-            <h1>LOADING</h1>
+            <Loading />
           ) : (
             <div className="panel">
               <TeamLogo id={teamId} />
